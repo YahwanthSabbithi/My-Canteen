@@ -13,8 +13,8 @@ export class AdminService {
   public userid:any;
   private food: any;
   public qrcode:any;
-  private baseUri: string = environment.heroku ? "https://appcanteen.herokuapp.com/admin/" : "http://localhost:3000/admin/";
-  // private baseUri: string = "http://localhost:3000/admin/";
+  // private baseUri: string = environment.heroku ? "https://appcanteen.herokuapp.com/admin/" : "http://localhost:3000/admin/";
+  private baseUri: string = "http://localhost:3000/admin/";
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }
 

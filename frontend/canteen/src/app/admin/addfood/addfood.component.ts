@@ -63,7 +63,7 @@ export class AddfoodComponent implements OnInit {
     formData.append('foodname', this.foodname);
     formData.append('foodprice', this.foodprice);
     formData.append('foodqty', this.foodqty);
-    // console.log(formData);
+    console.log(formData);
     this.adminService.addfood(formData).subscribe(
       data => {
         if (data['msg']) {

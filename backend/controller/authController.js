@@ -69,6 +69,7 @@ exports.logIn = (req, res) => {
                         res.json({ msg: 'Incorrect password!!' })
                     }
                 }).catch(err => {
+                    console.log(err)
                     console.log("somthing wrong");
                     res.json({ msg: 'Somthing went wrong' })
                 })

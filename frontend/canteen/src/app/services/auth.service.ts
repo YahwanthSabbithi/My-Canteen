@@ -11,8 +11,8 @@ export class AuthService {
   public avail: boolean = false;
   public msg: string = "";
   public count :any;
-  private baseUri: string =environment.heroku ? "https://appcanteen.herokuapp.com":"http://localhost:3000";
-  // private baseUri: string = "http://localhost:3000";
+  // private baseUri: string =environment.heroku ? "https://appcanteen.herokuapp.com":"http://localhost:3000";
+  private baseUri: string = "http://localhost:3000";
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -24,10 +24,13 @@ export class AuthService {
   }
 
   login(body: any) {
-    return this.http.post(this.baseUri+'/login', body, {
+    let test= this.http.post(this.baseUri+'/login', body, {
       observe: 'body',
       headers: new HttpHeaders().append('Content-Type', 'application/json')
     });
+    // localStorage.setItem("key", test)
+    console.log(test)
+    return test;
   }
 
   loggedIn() {

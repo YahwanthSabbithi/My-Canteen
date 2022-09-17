@@ -4,7 +4,12 @@
 
 export const environment = {
   production: false,
-  heroku :true
+  heroku: true,
+  // URI:"mongodb+srv://yahwanth:yahwanth@food.wziqs4s.mongodb.net/sales?retryWrites=true&w=majority",
+  // EMAILPASSWORD : "Yahwanth@14",
+  // ABC : 'hello152 ',
+  // PQR : '589 ',
+  // SECRETKEY :'1234'
 };
 
 /*

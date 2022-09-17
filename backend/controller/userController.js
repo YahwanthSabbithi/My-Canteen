@@ -3,6 +3,7 @@ var Food = require('../models/food')
 var Cart = require('../models/cart')
 var Order = require('../models/order')
 var Feedback = require('../models/feedback')
+require("dotenv").config();
 exports.myProfile = (req, res) => {
     User.findOne({ _id: req.userId }, (error, user) => {
         if (error) {

@@ -56,6 +56,7 @@ export class LoginregisterComponent implements OnInit {
     this.authService.register(JSON.stringify(f.value))
       .subscribe(
         data => {
+          console.log(data)
           if (data['msg']) {
             this.msg = data['msg'];
             this.avail = true;
@@ -88,7 +89,7 @@ export class LoginregisterComponent implements OnInit {
     this.authService.login(JSON.stringify(f.value))
       .subscribe(
         data => {
-          // //console.log(data);
+          console.log(data);
           if (data['msg']) {
             this.msg = data['msg'];
             this.avail = true;
@@ -97,7 +98,6 @@ export class LoginregisterComponent implements OnInit {
           if (data['role'] == "admin") {
             // //console.log("admin");
             localStorage.setItem('token', data['token']);
-
             localStorage.setItem('userid', f.controls.email.value);
             localStorage.setItem('admin', 'yes');
             localStorage.setItem('user', 'no');
@@ -113,7 +113,6 @@ export class LoginregisterComponent implements OnInit {
             }
             else {
               localStorage.setItem('token', data['token']);
-
               localStorage.setItem('userid', f.controls.email.value);
               localStorage.setItem('admin', 'no');
               localStorage.setItem('user', 'yes');

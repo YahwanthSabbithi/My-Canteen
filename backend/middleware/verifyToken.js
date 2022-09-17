@@ -8,7 +8,8 @@ exports.verifyToken = (req, res, next) => {
     if (token == 'null') {
         return res.status(401).send("unauthorized req")
     }
-    let payload = jwt.verify(token, process.env.SECRETKEY)
+    // process.env.SECRETKEY;
+    let payload = jwt.verify(token,process.env.SECRETKEY )
     if (!payload) {
         return res.status(401).send("unauthorized req")
     }
