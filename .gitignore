@@ -4,4 +4,7 @@ frontend/canteen/src/app/secret.ts
 backend/node_modules
 backend/.env
 backend/.gitignore
+backend/.node_modules
 backend/cloud9032-a51743abb29e.json
+node_modules
+.vscode
